@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '.devcontainer/Dockerfile'
+      - 'hydrolib/Dockerfile'
   # pull_request:
   #   types: [closed]
   #   branches:

@@ -97,6 +97,7 @@ ARG GID=$UID
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         bash \
+        bash-completion \
         binutils \
         ca-certificates \
         doxygen \
@@ -140,6 +141,9 @@ RUN printf '%s\n' /usr/local/lib64 /usr/local/lib > /etc/ld.so.conf.d/000-gcc.co
         > /etc/gdb/gdbinit.d/gcc.gdb \
     && ln -sf /usr/local/bin/gcc /usr/local/bin/cc \
     && ln -sf /usr/local/bin/g++ /usr/local/bin/c++ \
+    && for tool in cmake ctest cpack; do \
+        ln -sf "/opt/cmake/share/bash-completion/completions/$tool" "/usr/share/bash-completion/completions/$tool"; \
+    done \
     && python3 -m venv /opt/compdb \
     && /opt/compdb/bin/pip install --no-cache-dir --only-binary=:all: "compdb==$COMPDB_VERSION" \
     && gcc --version \

@@ -104,6 +104,7 @@ RUN apt-get update \
         gdb \
         git \
         libatomic1 \
+        libbenchmark-dev \
         libc6-dev \
         libcapture-tiny-perl \
         libdatetime-perl \

@@ -29,7 +29,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ${{ github.workspace }}
-          file: .devcontainer/Dockerfile
+          file: hydrolib/Dockerfile
           push: true
           platforms: linux/amd64,linux/arm64
           tags: seajackal/hydrolib_ars:latest

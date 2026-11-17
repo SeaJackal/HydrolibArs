@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'hydrolib/Dockerfile'
+      - '.github/workflows/docker_building.yml'
   # pull_request:
   #   types: [closed]
   #   branches:

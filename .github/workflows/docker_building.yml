@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       built: ${{ steps.build.outcome == 'success' }}
-      image: ${{ steps.build.outputs.digest && format('seajackal/hydrolib-common@{0}', steps.build.outputs.digest) || 'seajackal/hydrolib-common:latest' }}
+      image: ${{ steps.build.outputs.digest && format('seajackal/hydrocommon_ars@{0}', steps.build.outputs.digest) || 'seajackal/hydrocommon_ars:latest' }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

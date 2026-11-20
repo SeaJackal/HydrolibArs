@@ -1,5 +1,5 @@
 ARG DEBIAN_VERSION=trixie-slim
-ARG COMMON_IMAGE=seajackal/hydrolib-common:latest
+ARG COMMON_IMAGE=seajackal/hydrocommon_ars:latest
 ARG GCC_ARM_VERSION=15.3.rel2
 ARG RENODE_VERSION=1.17.0
 ARG COMPDB_VERSION=0.2.0
